@@ -13,25 +13,24 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class ProblemsRepositoryTest {
-	
+
 	@Autowired
 	ProblemsRepository problemsRepository;
-	
+
 	@Test
 	public void save_load_problem() {
 		String title = "문제이름";
 		Long problemNum = 9229L;
-		
-		problemsRepository.save(Problems.builder()
-				.title(title)
-				.problemNum(problemNum)
-				.build());
-		
+
+		problemsRepository.save(Problems.builder().title(title).problemNum(problemNum).build());
+
 		List<Problems> problemsList = problemsRepository.findAll();
-		
+
 		Problems problems = problemsList.get(0);
 		assertThat(problems.getTitle()).isEqualTo(title);
 		assertThat(problems.getProblemNum()).isEqualTo(problemNum);
-		
+//		assertThat(problems.getSolved()).isEqualTo(0);
+//		assertThat(problems.getId()).isEqualTo(0);
+
 	}
 }

@@ -11,7 +11,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.ycopp.todo.controller.HelloWorldController;
+import com.ycopp.todo.web.HelloWorldController;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = HelloWorldController.class)

@@ -1,4 +1,4 @@
-package com.ycopp.todo.controller;
+package com.ycopp.todo.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
