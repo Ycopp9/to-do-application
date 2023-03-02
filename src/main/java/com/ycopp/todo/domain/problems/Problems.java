@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -34,7 +35,11 @@ public class Problems {
 	public Problems(String title, Long problemNum) {
 		this.title = title;
 		this.problemNum = problemNum;
-		
 	}
 	
+	
+	public void update(String title, Integer solved) {
+		this.title = title;
+		this.solved = solved;
+	}
 }
